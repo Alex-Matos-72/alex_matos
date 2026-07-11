@@ -90,5 +90,111 @@
 
 </form>
 
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Candidatura para Lecionar</title>
+</head>
+<body>
+
+    <main>
+        <h1>Candidatura para Lecionar</h1>
+        
+        <form action="#" method="POST">
+            
+            <!-- Grupo de Informações Pessoais -->
+            <fieldset>
+                <legend>Informações Pessoais</legend>
+                
+                <p>
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+                </p>
+                
+                <p>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required placeholder="exemplo@email.com">
+                </p>
+                
+                <p>
+                    <label for="idade">Idade:</label>
+                    <input type="number" id="idade" name="idade" min="18" max="100" required>
+                </p>
+            </fieldset>
+
+            <!-- Grupo de Informações Profissionais e Acadêmicas -->
+            <fieldset>
+                <legend>Dados Profissionais e Formação</legend>
+                
+                <!-- Matéria para lecionar usando uma lista de seleção (Select) -->
+                <p>
+                    <label for="materia">Para qual matéria você está se candidatando para lecionar?</label>
+                    <select id="materia" name="materia" required>
+                        <option value="" disabled selected>Selecione uma matéria...</option>
+                        <option value="matematica">Matemática</option>
+                        <option value="portugues">Português</option>
+                        <option value="biologia">Biologia</option>
+                        <option value="ciencias">Ciências</option>
+                        <option value="historia">História</option>
+                        <option value="geografia">Geografia</option>
+                        <option value="artes">Artes</option>
+                    </select>
+                </p>
+
+                <!-- Nível de escolaridade usando botões de rádio (apenas uma escolha possível) -->
+                <p><strong>Nível de Escolaridade:</strong></p>
+                
+                <div>
+                    <input type="radio" id="superior-completo" name="escolaridade" value="superior-completo" required>
+                    <label for="superior-completo">Ensino Superior Completo</label>
+                </div>
+                
+                <div>
+                    <input type="radio" id="cursando-mestrado" name="escolaridade" value="cursando-mestrado">
+                    <label for="cursando-mestrado">Cursando Mestrado</label>
+                </div>
+                
+                <div>
+                    <input type="radio" id="mestrado-completo" name="escolaridade" value="mestrado-completo">
+                    <label for="mestrado-completo">Mestrado Completo</label>
+                </div>
+                
+                <div>
+                    <input type="radio" id="cursando-doutorado" name="escolaridade" value="cursando-doutorado">
+                    <label for="cursando-doutorado">Cursando Doutorado</label>
+                </div>
+                
+                <div>
+                    <input type="radio" id="doutorado-completo" name="escolaridade" value="doutorado-completo">
+                    <label for="doutorado-completo">Doutorado Completo</label>
+                </div>
+            </fieldset>
+
+            <!-- Descrição (Campo de texto maior) -->
+            <fieldset>
+                <legend>Sobre Você</legend>
+                <p>
+                    <label for="descricao">Descrição sobre si mesmo:</label><br>
+                    <textarea id="descricao" name="descricao" rows="6" cols="50" placeholder="Conte um pouco sobre sua trajetória profissional e motivações..." required></textarea>
+                </p>
+            </fieldset>
+
+            <!-- Botão de Envio -->
+            <p>
+                <button type="submit">Enviar Candidatura</button>
+            </p>
+
+        </form>
+    </main>
+
+</body>
+</html>
+
+
+
+
 </body>
 </html>
