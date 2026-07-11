@@ -192,7 +192,126 @@
 
 </body>
 </html>
+<br>
+<br>
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Candidatura - Regras Aplicadas</title>
+</head>
+<body>
+
+    <main>
+        <h1>Candidatura para Lecionar</h1>
+        
+        <!-- REGRA: Form com id e nome de "form" -->
+        <form id="form" name="form" action="#" method="POST">
+            
+            <!-- Grupo de Informações Pessoais -->
+            <fieldset>
+                <legend>Informações Pessoais</legend>
+                
+                <p>
+                    <label for="campo-nome">Nome Completo:</label>
+                    <!-- REGRA: name="nome" -->
+                    <input type="text" id="campo-nome" name="nome" required placeholder="Digite seu nome completo">
+                </p>
+                
+                <p>
+                    <label for="campo-email">E-mail:</label>
+                    <!-- REGRA: name="email" -->
+                    <input type="email" id="campo-email" name="email" required placeholder="exemplo@email.com">
+                </p>
+                
+                <p>
+                    <label for="campo-idade">Idade:</label>
+                    <!-- REGRA: name="idade" -->
+                    <input type="number" id="campo-idade" name="idade" min="18" max="100" required>
+                </p>
+            </fieldset>
+
+            <!-- Grupo de Informações Profissionais e Acadêmicas -->
+            <fieldset>
+                <legend>Dados Profissionais e Formação</legend>
+                
+                <!-- REGRA: O campo com as opções de matérias deve ter um ID também -->
+                <!-- REGRA: name="assunto" -->
+                <p>
+                    <label for="campo-materia">Para qual matéria você está se candidatando para lecionar?</label>
+                    <select id="campo-materia" name="assunto" required>
+                        <option value="" disabled selected>Selecione uma matéria...</option>
+                        <option value="matematica">Matemática</option>
+                        <option value="portugues">Português</option>
+                        <option value="biologia">Biologia</option>
+                        <option value="ciencias">Ciências</option>
+                        <option value="historia">História</option>
+                        <option value="geografia">Geografia</option>
+                        <option value="artes">Artes</option>
+                    </select>
+                </p>
+
+                <!-- REGRA: Inclusão do campo com name="turnos disponíveis" -->
+                <p><strong>Turnos Disponíveis:</strong></p>
+                <div>
+                    <input type="checkbox" id="turno-manha" name="turnos disponíveis" value="manha">
+                    <label for="turno-manha">Manhã</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="turno-tarde" name="turnos disponíveis" value="tarde">
+                    <label for="turno-tarde">Tarde</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="turno-noite" name="turnos disponíveis" value="noite">
+                    <label for="turno-noite">Noite</label>
+                </div>
+
+                <!-- REGRA: name="escolaridade" -->
+                <p><strong>Nível de Escolaridade:</strong></p>
+                <div>
+                    <input type="radio" id="superior-completo" name="escolaridade" value="superior-completo" required>
+                    <label for="superior-completo">Ensino Superior Completo</label>
+                </div>
+                <div>
+                    <input type="radio" id="cursando-mestrado" name="escolaridade" value="cursando-mestrado">
+                    <label for="cursando-mestrado">Cursando Mestrado</label>
+                </div>
+                <div>
+                    <input type="radio" id="mestrado-completo" name="escolaridade" value="mestrado-completo">
+                    <label for="mestrado-completo">Mestrado Completo</label>
+                </div>
+                <div>
+                    <input type="radio" id="cursando-doutorado" name="escolaridade" value="cursando-doutorado">
+                    <label for="cursando-doutorado">Cursando Doutorado</label>
+                </div>
+                <div>
+                    <input type="radio" id="doutorado-completo" name="escolaridade" value="doutorado-completo">
+                    <label for="doutorado-completo">Doutorado Completo</label>
+                </div>
+            </fieldset>
+
+            <!-- Descrição (Campo de texto maior) -->
+            <fieldset>
+                <legend>Sobre Você</legend>
+                <p>
+                    <label for="campo-descricao">Descrição sobre si mesmo:</label><br>
+                    <!-- REGRA: name="descrição" -->
+                    <textarea id="campo-descricao" name="descrição" rows="6" cols="50" placeholder="Conte um pouco sobre sua trajetória profissional..." required></textarea>
+                </p>
+            </fieldset>
+
+            <!-- Botão de Envio -->
+            <p>
+                <button type="submit">Enviar Candidatura</button>
+            </p>
+
+        </form>
+    </main>
+
+</body>
+</html>
 
 
 
