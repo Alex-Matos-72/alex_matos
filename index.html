@@ -49,6 +49,54 @@
                 </p>
 
             </fieldset>
+            <br>
+            <p><strong>Turnos Disponíveis:</strong></p>
+                <div>
+                    <input type="checkbox" id="turno-manha" name="turnos disponíveis" value="manha">
+                    <label for="turno-manha">Manhã</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="turno-tarde" name="turnos disponíveis" value="tarde">
+                    <label for="turno-tarde">Tarde</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="turno-noite" name="turnos disponíveis" value="noite">
+                    <label for="turno-noite">Noite</label>
+                </div>
+
+                <!-- REGRA: name="escolaridade" -->
+                <p><strong>Nível de Escolaridade:</strong></p>
+                <div>
+                    <input type="radio" id="superior-completo" name="escolaridade" value="superior-completo" required>
+                    <label for="superior-completo">Ensino Superior Completo</label>
+                </div>
+                <div>
+                    <input type="radio" id="cursando-mestrado" name="escolaridade" value="cursando-mestrado">
+                    <label for="cursando-mestrado">Cursando Mestrado</label>
+                </div>
+                <div>
+                    <input type="radio" id="mestrado-completo" name="escolaridade" value="mestrado-completo">
+                    <label for="mestrado-completo">Mestrado Completo</label>
+                </div>
+                <div>
+                    <input type="radio" id="cursando-doutorado" name="escolaridade" value="cursando-doutorado">
+                    <label for="cursando-doutorado">Cursando Doutorado</label>
+                </div>
+                <div>
+                    <input type="radio" id="doutorado-completo" name="escolaridade" value="doutorado-completo">
+                    <label for="doutorado-completo">Doutorado Completo</label>
+                </div>
+            </fieldset>
+
+            <!-- Descrição (Campo de texto maior) -->
+            <fieldset>
+                <legend>Sobre Você</legend>
+                <p>
+                    <label for="campo-descricao">Descrição sobre si mesmo:</label><br>
+                    <!-- REGRA: name="descrição" -->
+                    <textarea id="campo-descricao" name="descrição" rows="6" cols="50" placeholder="Conte um pouco sobre sua trajetória profissional..." required></textarea>
+                </p>
+            </fieldset>
     </main>
 </body>
 </html>
